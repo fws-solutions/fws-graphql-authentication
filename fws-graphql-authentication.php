@@ -351,7 +351,7 @@ final class Authentication
 	 *
 	 * @return string
 	 */
-	private static function getTokenFromHeaders(): string
+	private static function getTokenFromHeaders(): ?string
 	{
 		$token = '';
 
@@ -370,16 +370,16 @@ final class Authentication
 	 *
 	 * @return string
 	 */
-	private static function getAuthHeader(): string
+	private static function getAuthHeader(): ?string
 	{
-		$authHeader = $_SERVER['HTTP_AUTHORIZATION'] ?? ( $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? '' );
+		$authHeader = $_SERVER['HTTP_AUTHORIZATION'] ?? ( $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? null );
 
 		/**
 		 * Return the auth header, pass through a filter
 		 *
 		 * @param string $authHeader The header used to authenticate a user's HTTP request
 		 */
-		return apply_filters( 'fws_graphql_auth_get_auth_header', $authHeader );
+		return apply_filters( 'fws_graphql_auth_get_auth_header', $authHeader ) ?: null;
 	}
 }
 
