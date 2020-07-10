@@ -1,15 +1,14 @@
 <?php
 declare( strict_types=1 );
 /**
- * Plugin Name: FWS Graphql Authentication
+ * Plugin Name: FWS WP GraphQL Authentication
  * Plugin URI:
- * Description: Authentication functionality for WPGraphQL
- * Author: Boris Djemrovski
- * Author URI:
+ * Description: Authentication for WP GraphQL (https://www.wpgraphql.com/)
+ * Author: Forwardslash
+ * Author URI: https://www.forwardslashny.com/
  * Text Domain: fws-graphql-authentication
- * Version: 0.0.1
+ * Version: 0.1.0
  * Requires at least: 4.7.0
- * Tested up to: 4.8.3
  * Requires PHP: 7.2
  * License: GPL-3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
