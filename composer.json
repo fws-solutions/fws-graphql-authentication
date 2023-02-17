@@ -17,7 +17,7 @@
         "wpunit-test": "vendor/bin/codecept run wpunit"
     },
     "require": {
-        "firebase/php-jwt": "^5.2"
+        "firebase/php-jwt": "^6.0"
     },
     "config": {
         "optimize-autoloader": true
